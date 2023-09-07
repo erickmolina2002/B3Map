@@ -14,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::controller(StocksController::class)->group(function () {
-    Route::get('/stocks', 'index');
-    Route::get('/stocks/add', 'add');
+    Route::get('/stocks', 'index')->name('stocks.index');
+    Route::get('/stocks/add', 'add')->name('stocks.add');
 });

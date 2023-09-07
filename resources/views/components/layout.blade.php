@@ -9,8 +9,9 @@
         <title> B3Map - {{ $title }}</title>
     </head>
     <body>
+    <div id="menu-bar">
         <nav>
-            <a id="text-logo" href="/stocks">Logo</a>
+            <a id="text-logo" href="{{ route('stocks.index') }}">Logo</a>
             <ul id="menu">
                 <li>Funcionalidades</li>
                 <li>App</li>
@@ -18,7 +19,13 @@
                 <li>Contato</li>
             </ul>
         </nav>
-        <h1>{{ $title }}</h1>
-        {{ $slot }}
+    </div>
+    <div id="top-slot">
+        <h1 id="text-title-stock">{{ $title }}</h1>
+        <div id="slot">
+            {{ $slot }}
+        </div>
+    </div>
+
     </body>
     </html>
