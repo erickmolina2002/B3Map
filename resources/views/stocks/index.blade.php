@@ -1,6 +1,5 @@
 <x-layout title="Stocks">
-    <a href="{{ route('stocks.index') }}">Add</a>
     @foreach($stocks as $stock => $value)
-        <li> {{ "$stock => R$ $value"}} </li>
+        <li> {{ "$stock => R$ $value->price"}} </li>
     @endforeach
 </x-layout>

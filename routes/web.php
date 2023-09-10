@@ -20,4 +20,5 @@ Route::get('/', function () {
 Route::controller(StocksController::class)->group(function () {
     Route::get('/stocks', 'index')->name('stocks.index');
     Route::get('/stocks/add', 'add')->name('stocks.add');
+    Route::post('/stocks/store', 'store')->name('stocks.store');
 });
