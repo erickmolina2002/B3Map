@@ -11,9 +11,10 @@ return new class extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
-            $table->string("ticket", 6)->unique()->nullable();
-            $table->decimal("price")->nullable();
-            $table->integer("number")->nullable();
+            $table->string("ticket",6)->nullable(false);
+            $table->decimal("price")->nullable(false);
+            $table->integer("number")->nullable(false);
+            $table->date("date")->nullable(false);
         });
     }
 

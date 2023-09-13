@@ -54,6 +54,7 @@ a#text-logo:hover {
 
 #top-slot{
     padding-top: 5rem;
+    padding-inline: 5rem;
 }
 
 #slot{
@@ -80,3 +81,38 @@ a#text-logo:hover {
     justify-content: space-around;
 }
 
+thead #index-table{
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    align-items: center;
+    background-color: red;
+    height: 5vh;
+}
+.gridview {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.gridview th,
+.gridview td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.gridview th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.gridview tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.gridview tbody tr:hover {
+    background-color: #ddd;
+}

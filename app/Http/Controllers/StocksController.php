@@ -13,7 +13,7 @@ class StocksController extends Controller
 {
     public function index(Request $request): View
     {
-        $stocks = Stock::all();
+        $stocks = Stock::all('id');
         return view('stocks.index')->with("stocks",$stocks);
     }
 
@@ -26,5 +26,11 @@ class StocksController extends Controller
     {
         Stock::create($request->all());
         return redirect(route('stocks.index'));
+    }
+
+    public function destroy(Request $request)
+    {
+        Stock::destroy($request->stock);
+        return to_route('stocks.index');
     }
 }
