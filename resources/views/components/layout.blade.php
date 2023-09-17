@@ -25,9 +25,17 @@
     <div id="top-slot">
         <h1 id="text-title-stock">{{ $title }}</h1>
         <div id="slot">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             {{ $slot }}
         </div>
     </div>
-
     </body>
     </html>

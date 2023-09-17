@@ -21,5 +21,6 @@ Route::controller(StocksController::class)->group(function () {
     Route::get('/stocks', 'index')->name('stocks.index');
     Route::get('/stocks/add', 'add')->name('stocks.add');
     Route::post('/stocks/store', 'store')->name('stocks.store');
+    Route::put('/stocks/store', 'store')->name('stocks.store');
     Route::delete('/stocks/destroy/{stock}', 'destroy')->name('stocks.destroy');
 });
