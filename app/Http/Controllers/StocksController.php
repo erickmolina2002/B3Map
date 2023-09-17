@@ -25,10 +25,10 @@ class StocksController extends Controller
     public function store(Request $request): Redirector|Application|RedirectResponse
     {
         $request->validate([
-            'ativo' => ['required','min:5','max:6'],
-            'valor' => ['required','numeric','min:0.01','regex:/^\d+(\,\d{1.2})?$/'],
-            'quantidade' => ['required','numeric','integer','min:1'],
-            'data' => ['required','date','before:today'],
+            'ticket' => ['required','min:5','max:6'],
+            'price' => ['required','numeric','min:0.01'],
+            'number' => ['required','numeric','integer','min:1'],
+            'date' => ['required','date','before:today'],
         ]);
         Stock::create($request->all());
         return redirect(route('stocks.index'));
